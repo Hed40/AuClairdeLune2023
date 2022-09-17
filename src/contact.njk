@@ -1,0 +1,71 @@
+---
+title: Contact
+layout: layout.njk
+style: /css/contact.css
+description: Charles Cantin photographie - Page de contacte, afin d'effectuer vos demandes et prendre vos rendez-vous.
+script: /js/validationForm.js
+---
+<aside class="container_info">
+    <section class="section_info">
+        <div class= "title_capt">
+            <h2>{{site.contactTitle1}}</h2>
+        </div>
+        <div class="informations">
+                        <div class="logo_Cc_blue2">
+            <img src="{{'/img/logo/logo_CC_blue2.png'}}" ></img>
+        </div>
+            <p>Pour toutes demandes de devis et/ou prise de rendez-vous, vous pouvez me contacter directement via : </p>
+            <p> Le formulaire de contacte ci-après.</p>
+            <p class="and"><b>- OU -</b></p>
+            <div class="postal_adress">
+                <p>Par courier, à l'adresse suivante :</p>
+                <p><b>Charles Cantin - Photographie</b><br>10 rue du Focus<br>40160 Parentis-en-Born</p>
+            </div>
+            <p class="and"><b>- OU -</b></p>
+            <div class="phone">
+                <p>Par téléphone au numéro suivant :</p>
+                <p><b>06 06 07 07 99</b></p>
+            </div>
+        </section>
+    </aside>
+    <container class="container_form">
+        <section class="section_form">
+            <div class= "title_capt">
+                <h2>{{site.contactTitle2}}</h2>
+            </div>
+            <form   action="https://formspree.io/f/xpznaokj" method="POST" action="/?success=true">
+                <div class="lastname mb-2">
+                    <label for="lastName" class="form-label"></label>
+                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Nom" required>
+                    <div class="invalid-feedback">Veuillez saisir votre nom.</div>
+                </div>
+                <div class="firstname mb-2">
+                    <label for="firstname" class="form-label"></label>
+                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Prénom" required>
+                    <div class="invalid-feedback">Veuillez saisir votre prénom.</div>
+                </div>
+
+                <div class="email mb-2">
+                    <label for="email" class="form-label"></label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="j.dupont@gmail.com" required>
+                    <div class="invalid-feedback">Veuillez saisir votre e-mail.</div>
+                </div>
+                <div class="phoneNumber mb-2">
+                    <label for="phoneNumber" class="form-label"></label>
+                    <input type="phoneNumber" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="n° de téléphone" required>
+                    <div class="invalid-feedback">Veuillez saisir votre numéro de téléphone.</div>
+                </div>
+                <div class="Message mb-2">
+                    <label for="Message" class="form-label"></label>
+                    <textarea type="form-control" class="form-control" name="Message" id="Message" rows="11" placeholder="Veuillez écrire votre message ici..." required></textarea>
+                    <div class="invalid-feedback">Veuillez saisir au moins 20 caractères.</div>
+                </div>
+                <div class="submit">
+                    <button type="submit" class="btn btn-primary ">Soumettre</button>
+                </div>
+            </form
+        </section>
+    </container>
+      <button type="button" class="rounded-circle " id="btn-back-to-top">
+    <img class="arrow_img" src="{{'/img/logo/arrow-up.png'}}"></img>
+  </button>

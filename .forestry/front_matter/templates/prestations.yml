@@ -1,0 +1,46 @@
+---
+label: Prestations
+hide_body: true
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+- name: titre
+  type: text
+  config:
+    required: false
+  label: Titre
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: prix
+  type: text
+  config:
+    required: false
+  label: Prix
+- name: toast_title
+  type: text
+  config:
+    required: false
+  label: Toast_Title
+- name: toast_sub_title
+  type: text
+  config:
+    required: false
+  label: Toast_Sub_title
+- name: toast_body
+  type: text
+  config:
+    required: false
+  label: Toast_body
+pages:
+- src/content/prestations/Famille.md
+- src/content/prestations/Grossesse.md
+- src/content/prestations/J'immortalise.md
+- src/content/prestations/Juste moi.md
+- src/content/prestations/Pour deux.md
+- src/content/prestations/Presta_bébé.md

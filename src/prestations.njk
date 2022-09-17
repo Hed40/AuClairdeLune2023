@@ -1,0 +1,38 @@
+---
+title: Mes prestations
+layout: layout.njk
+description: Charles Cantin photographie - Ici vous Trouverez la prestation photo qui vous convient, n'hésitez pas à me contacter pour plus d'informations.
+style: /css/prestations.css
+---
+ <container class="container_prestations">
+        <div class= "title_capt">
+        <h2>{{site.priceTitle}}</h2>
+      </div>
+    <section class="section_prestations">
+      {% for prestations in collections.prestations %}
+        <div class="card mb-3">
+          <div class="row g-0" id="row_description">
+            <div class="image col-md-4 col-sm-2">
+              <img src="{{ prestations.data.image| url }}" class="img-fluid rounded" id="images_presta" alt="image">
+            </div>
+            <div class="col-md-8" id="element_box">
+              <div class="card-body">
+                <div class="combo_title_info">
+                  <h3 class="card-title" id="titlecard">{{ prestations.data.titre | safe }}</h3>
+              </div>
+              <div id="description">
+              <p class="card-text">{{ prestations.data.description | safe }}</p>
+              </div>
+              <div id="price">
+              <p class="card-text-Price" >{{prestations.data.prix | safe }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  </container>
+  <button type="button" class="rounded-circle " id="btn-back-to-top">
+    <img class="arrow_img" src="{{'/img/logo/arrow-up.png'}}"></img>
+  </button>
